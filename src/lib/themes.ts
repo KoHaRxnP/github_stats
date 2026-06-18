@@ -276,6 +276,98 @@ export const themes: Record<string, Theme> = {
       background: ['#667eea', '#764ba2']
     }
   }
+  matcha: {
+    name: 'matcha',
+    displayName: '抹茶モダン',
+    colors: {
+      background: '#2c351f',
+      cardBg: '#3c482b',
+      border: '#4c5b37',
+      text: '#f4f7f0',
+      textSecondary: '#adc19a',
+      accent: '#8da871',
+      green: '#a3be8c',
+      yellow: '#ebcb8b',
+      purple: '#b48ead',
+      red: '#bf616a',
+      orange: '#d08770',
+      primary: '#8da871',
+      secondary: '#a3be8c'
+    },
+    gradients: {
+      score: ['#8da871', '#a3be8c'],
+      background: ['#2c351f', '#3c482b']
+    }
+  },
+  retro: {
+    name: 'retro',
+    displayName: 'レトロポップ',
+    colors: {
+      background: '#2b0040',
+      cardBg: '#3d005a',
+      border: '#ff007f',
+      text: '#00f5ff',
+      textSecondary: '#ffb7b2',
+      accent: '#ff007f',
+      green: '#00ffcc',
+      yellow: '#fffb00',
+      purple: '#bd00ff',
+      red: '#ff3366',
+      orange: '#ff6600',
+      primary: '#ff007f',
+      secondary: '#00f5ff'
+    },
+    gradients: {
+      score: ['#ff007f', '#00f5ff'],
+      background: ['#2b0040', '#3d005a']
+    }
+  },
+  rose: {
+    name: 'rose',
+    displayName: 'ローズクォーツ',
+    colors: {
+      background: '#2d2426',
+      cardBg: '#3d3134',
+      border: '#5c4b4f',
+      text: '#fcefe6',
+      textSecondary: '#cca7aa',
+      accent: '#e0a899',
+      green: '#8fa993',
+      yellow: '#e7c07e',
+      purple: '#b8a4c9',
+      red: '#d98880',
+      orange: '#e59866',
+      primary: '#e0a899',
+      secondary: '#cca7aa'
+    },
+    gradients: {
+      score: ['#e0a899', '#fcefe6'],
+      background: ['#2d2426', '#3d3134']
+    }
+  },
+  hacker: {
+    name: 'hacker',
+    displayName: 'ターミナル',
+    colors: {
+      background: '#000000',
+      cardBg: '#0d0d0d',
+      border: '#00ff00',
+      text: '#00ff00',
+      textSecondary: '#00aa00',
+      accent: '#00ff00',
+      green: '#33ff33',
+      yellow: '#ffff33',
+      purple: '#9933ff',
+      red: '#ff3333',
+      orange: '#ff9933',
+      primary: '#00ff00',
+      secondary: '#00aa00'
+    },
+    gradients: {
+      score: ['#00aa00', '#00ff00'],
+      background: ['#000000', '#0d0d0d']
+    }
+  }
 };
 
 export function getTheme(themeName?: string): Theme {
