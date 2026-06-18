@@ -275,7 +275,7 @@ export const themes: Record<string, Theme> = {
       score: ['#fbbf24', '#f472b6'],
       background: ['#667eea', '#764ba2']
     }
-  }
+  },
   matcha: {
     name: 'matcha',
     displayName: '抹茶モダン',
