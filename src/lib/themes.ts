@@ -360,7 +360,7 @@ export const themes: Record<string, Theme> = {
       purple: '#9933ff',
       red: '#ff3333',
       orange: '#ff9933',
-      primary: '#00ff00',
+      primary: '#00fa9a',
       secondary: '#00aa00'
     },
     gradients: {
