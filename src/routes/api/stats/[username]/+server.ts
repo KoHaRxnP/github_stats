@@ -10,6 +10,7 @@ interface GitHubRepo {
 	stargazers_count: number;
 	forks_count: number;
 	size: number;
+ fork: boolean;
 }
 
 interface ContributionStreak {
@@ -81,7 +82,9 @@ async function fetchUserRepos(username: string): Promise<GitHubRepo[]> {
 			const pageRepos = await response.json();
 			if (pageRepos.length === 0) break;
 
-			repos.push(...pageRepos);
+   const originalRepos = pageRepos.filter((repo: any) => !repo.fork);
+
+			repos.push(...originalRepos);
 			page++;
 		} catch (error) {
 			console.error('Error fetching repositories:', error);
@@ -285,8 +288,8 @@ async function estimateCodeLines(repos: GitHubRepo[]): Promise<number> {
 	// 各リポジトリのサイズ（KB）を基にコード行数を推定
 	// 一般的に1KB ≈ 15-20行程度と仮定
 	for (const repo of repos) {
+  if (repo.fork) continue;
 		if (repo.size > 0) {
-			// フォークされたリポジトリは除外
 			// サイズベースでの行数推定（1KB ≈ 18行と仮定）
 			totalLines += repo.size * 18;
 		}
