@@ -355,12 +355,12 @@ export const themes: Record<string, Theme> = {
       text: '#00ff00',
       textSecondary: '#00aa00',
       accent: '#00ff00',
-      green: '#33ff33',
+      green: '#ff1676',
       yellow: '#ffff33',
       purple: '#9933ff',
       red: '#ff3333',
       orange: '#ff9933',
-      primary: '#ff1676',
+      primary: '#00ff00',
       secondary: '#00aa00'
     },
     gradients: {
