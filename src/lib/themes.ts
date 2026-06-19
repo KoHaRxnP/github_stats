@@ -354,7 +354,7 @@ export const themes: Record<string, Theme> = {
       border: '#00ff00',
       text: '#00ff00',
       textSecondary: '#00aa00',
-      accent: '#00ff00',
+      accent: '#ff00ff',
       green: '#ff1676',
       yellow: '#ffff33',
       purple: '#9933ff',
