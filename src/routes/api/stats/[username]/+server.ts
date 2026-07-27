@@ -21,15 +21,16 @@ interface ContributionStreak {
 
 // GitHub API リクエストのヘッダー設定
 function getHeaders() {
-	const headers: Record<string, string> = {
-		'User-Agent': 'GitHub-Stats-Generator/1.0'
-	};
+        const headers: Record<string, string> = {
+                'User-Agent': 'GitHub-Stats-Generator/1.0',
+                'Accept': 'application/vnd.github.v3+json'
+        };
 
-	if (GITHUB_TOKEN) {
-		headers['Authorization'] = `token ${GITHUB_TOKEN}`;
-	}
+        if (GITHUB_TOKEN) {
+                headers['Authorization'] = `token ${GITHUB_TOKEN}`;
+        }
 
-	return headers;
+        return headers;
 }
 
 async function fetchGitHubUser(username: string): Promise<GitHubUser> {
