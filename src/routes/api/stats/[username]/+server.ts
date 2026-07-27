@@ -196,6 +196,10 @@ async function fetchReviewCount(username: string): Promise<number> {
 }
 
 async function fetchContributionStreak(username: string): Promise<ContributionStreak> {
+ if (!GITHUB_TOKEN) {
+                console.warn('GITHUB_TOKEN is required for GraphQL queries');
+                return { currentStreak: 0, longestStreak: 0, totalContributions: 0 };
+        }
 	try {
 		// GitHub GraphQL APIを使用してコントリビューション情報を取得
 		const query = `
